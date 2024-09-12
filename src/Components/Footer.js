@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import './Footer.css'; // Import the CSS file
+import './style.css';
 
 function Footer() {
   return (

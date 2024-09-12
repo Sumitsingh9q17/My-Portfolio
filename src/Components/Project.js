@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import './Project.css'; // Import your CSS file
+import './style.css';
 
 function Projects() {
   return (

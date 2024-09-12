@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import './Contact.css'; // Make sure to import your CSS file
+import './style.css';
 
 function Contact() {
   useEffect(() => {

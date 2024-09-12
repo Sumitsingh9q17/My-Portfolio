@@ -1,0 +1,18 @@
+/* src/styles/global.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive design with media queries */
+@media (max-width: 600px) {
+    /* Mobile styles */
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    /* Tablet styles */
+}
+
+@media (min-width: 901px) {
+    /* Desktop styles */
+}

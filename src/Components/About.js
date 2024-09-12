@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './About.css'; // Import the CSS file
+import './style.css';
 
 function About() {
   return (

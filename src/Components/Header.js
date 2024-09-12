@@ -4,6 +4,7 @@ import { loadFull } from 'tsparticles';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 import './Header.css';
+import './style.css';
 
 function Header() {
   
