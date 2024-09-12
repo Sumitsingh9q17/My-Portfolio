@@ -1,0 +1,278 @@
+/* Enhanced Gradient Background Animation */
+.bg-gradient-animation {
+    background: linear-gradient(45deg, #ff6f61, #debbf7, #b5e3f5, #a7a7ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 20s ease infinite;
+}
+
+/* Background Animation Keyframes */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Floating Shapes with Rotation, Bouncing, Pulsing, and Color Transition */
+.floating-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10; /* Ensure it stays in the background */
+}
+
+/* Shape Styling */
+.shape {
+    position: absolute;
+    border-radius: 50%; /* Circular shapes */
+    animation: floatShape 15s ease-in-out infinite, 
+               rotateShape 20s linear infinite, 
+               bounceShape 4s ease-in-out infinite, 
+               pulseShape 5s ease-in-out infinite, 
+               colorChange 6s linear infinite;
+    opacity: 0.7;
+}
+
+/* Keyframe Animation for Floating Shapes */
+@keyframes floatShape {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+    100% { transform: translateY(0); }
+}
+
+/* Keyframe Animation for Rotating Shapes */
+@keyframes rotateShape {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Keyframe Animation for Bouncing Effect */
+@keyframes bounceShape {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Keyframe Animation for Pulsing (Scale Up/Down) */
+@keyframes pulseShape {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Keyframe Animation for Color Transition */
+@keyframes colorChange {
+    0% { background-color: #ff9999; }
+    25% { background-color: #99ff99; }
+    50% { background-color: #9999ff; }
+    75% { background-color: #ffcc99; }
+    100% { background-color: #ff9999; }
+}
+
+/* Shape Variations */
+.shape1 {
+    width: 120px;
+    height: 120px;
+    top: 10%;
+    left: 15%;
+    animation-duration: 18s, 2.5s, 3s, 4s, 6s; /* Duration variations */
+}
+
+.shape2 {
+    width: 80px;
+    height: 80px;
+    top: 30%;
+    left: 70%;
+    animation-duration: 22s, 3s, 2.5s, 4.5s, 6s;
+}
+
+.shape3 {
+    width: 150px;
+    height: 150px;
+    top: 70%;
+    left: 40%;
+    animation-duration: 16s, 2s, 3.5s, 5s, 7s;
+}
+
+.shape4 {
+    width: 60px;
+    height: 60px;
+    top: 85%;
+    left: 10%;
+    animation-duration: 25s, 3.5s, 2s, 4s, 6s;
+}
+
+/* Wave Ripple Effect */
+.wave-ripple {
+    position: relative;
+    background: linear-gradient(90deg, #6ee7b7, #a4c0f7, #ff6f61);
+    overflow: hidden;
+}
+
+.wave-ripple::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -75%;
+    left: -100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 30%, transparent 70%);
+    transform: rotate(45deg);
+    animation: waveAnimation 10s linear infinite;
+}
+
+@keyframes waveAnimation {
+    0% { transform: translate(10, 10) rotate(45deg); }
+    100% { transform: translate(50%, 50%) rotate(45deg); }
+}
+
+/* Hover Ripple Effect for Cards */
+.card-hover-ripple {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #f1ffb4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-ripple:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(224, 137, 137, 0.3);
+}
+
+.card-hover-ripple::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(4, 208, 244, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+.card-hover-ripple:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Advanced Text Mask with Gradient and Shadow */
+.text-mask {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 3rem;
+    background: linear-gradient(90deg, #f4c542, #d33f49);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.993);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.text-mask:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 20px rgba(17, 16, 16, 0.8);
+}
+
+.text-mask span {
+    display: inline-block;
+    position: relative;
+}
+
+.text-mask span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #f4c542, #d33f49);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    animation: maskAnimation 3s ease-in-out infinite;
+}
+
+@keyframes maskAnimation {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Ripple Effect with Enhanced Button Hover State */
+.button-ripple {
+    position: relative;
+    overflow: hidden;
+    background-color: #bf1000;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.button-ripple::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple 1.5s infinite;
+}
+
+@keyframes ripple {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
+.button-ripple:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background-color: #e64a4a;
+}
+
+/* Click Ripple Effect */
+.click-ripple {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.click-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: width 0.6s ease, height 0.6s ease, opacity 1s ease;
+}
+
+.click-ripple:active::after {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+    transition: 0s;
+}
+
+/* Header Content Hover Effects with Glow */
+.text-center:hover .text-mask {
+    color: #0c0b0b;
+    transition: color 0.5s ease;
+    text-shadow: 0 0 15px rgba(34, 31, 31, 0.6);
+}

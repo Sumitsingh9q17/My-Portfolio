@@ -1,0 +1,226 @@
+/* Enhanced Gradient Background Animation */
+.bg-gradient-overlay {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, rgba(0, 255, 136, 0.753), rgba(255, 0, 150, 0.4), rgba(0, 204, 255, 0.4));
+    background-size: 400% 400%;
+    animation: gradientWave 15s ease infinite;
+}
+
+/* Radial Gradient Background Animation */
+.bg-radial-animation {
+    background: radial-gradient(circle, rgba(255, 105, 180, 0.2), rgba(0, 204, 255, 0.2));
+    background-size: 200% 200%;
+    animation: radialGradientAnimation 15s ease-in-out infinite;
+}
+
+@keyframes gradientWave {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+@keyframes radialGradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Advanced Text Mask with Gradient and Shadow */
+.text-mask {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 4rem;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #f4c542, #d33f49);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: textShadowAnimation 2s infinite alternate;
+    z-index: 10;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+@keyframes textShadowAnimation {
+    from { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+    to { text-shadow: 2px 2px 12px rgba(255, 105, 180, 0.8); }
+}
+
+/* Background Effect Animation */
+.background-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 80%);
+    animation: pulseEffect 10s infinite;
+    z-index: 1;
+}
+
+@keyframes pulseEffect {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 0.3; }
+}
+
+/* Text Reveal Animation */
+.text-reveal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+    background-size: 200% 200%;
+    animation: textReveal 8s linear infinite;
+    z-index: 0;
+}
+
+@keyframes textReveal {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Photo Effect */
+.photo-container {
+    position: relative;
+    width: 300px; /* Adjusted width */
+    height: 300px; /* Adjusted height */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.photo-container img {
+    width: 100%; /* Ensure image fills container */
+    height: 100%; /* Ensure image fills container */
+    object-fit: cover; /* Ensure image covers container without distortion */
+    border: 6px solid #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    filter: none; /* Ensure no blur effect */
+}
+
+.photo-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: photoGlow 8s infinite;
+    z-index: 1;
+}
+
+@keyframes photoGlow {
+    0% { transform: scale(1); opacity: 0.2; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 0.2; }
+}
+
+/* Photo Overlay */
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 30%, transparent 70%);
+    z-index: 0;
+}
+
+/* Neon Glow Effect */
+.photo-neon-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.8);
+    z-index: 2;
+}
+
+/* Particles Background Animation */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 40%);
+    animation: particlesAnimation 15s infinite;
+}
+
+@keyframes particlesAnimation {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* What I Know Section Styling */
+#what-i-know {
+    background: radial-gradient(circle, rgba(255, 105, 180, 0.2), rgba(0, 204, 255, 0.2));
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+#what-i-know h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.grid div {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.grid div:hover {
+    background-color: #f4f4f4;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.8); /* Enhanced glow effect */
+}
+
+/* Card Title Hover Effect */
+.grid div h3 {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.grid div:hover h3 {
+    color: #f4c542; /* Highlighted color on hover */
+}
+
+/* Container Styling */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Ensure section height is sufficient */
+#about {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Add a clearfix if needed for the section to avoid clipping */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
